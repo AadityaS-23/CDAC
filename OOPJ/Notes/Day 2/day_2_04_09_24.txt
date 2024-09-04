@@ -1,0 +1,116 @@
+Sandip Sir : 
+		Revision 
+		History :- 
+		Java Versions :- 
+
+Src :- java ka source code 
+
+Methods : interplace , Public , Static  
+
+SRC : com , java , javax , launcher , ioe
+
+dynamic instance 
+	new for instance 
+	emp 
+
+out is a static field is declared in system class 
+
+java is a opens source technology 
+
+rt.jar is a integral part jre 
+
+method name , class name 
+file locations 
+
+rt.jar consist existing java api 
+rt.jar consist of compile code of java 
+	### we need to explore package java.lang ### 
+
+Components of jvm 
+
+	Class loader subsystem 
+Bootstrap class loader 
+extension class loader 
+system class loader 
+custom class loader 
+
+	Runtime Data areas 
+method area 
+heap 
+java stacks 
+pc register 
+native method stacks 
+
+	Execution engine 
+interpreter 
+just in time compiler 
+garbage collector 
+
+
+memory leakage in java 
+no diamond problem 
+
+java supports all major and minor pillar of oops 
+
+artificial neutral language 
+
+java is a portable language 
+
+source file is portable but executable is not portable 
+.class file is portable by installing jvm in particular os 
+
+jdk is dependent of os 
+
+static is a modifier 
+private , protected access spe
+
+private - limiting for the class 
+package lvl private
+protected - 
+public - anywhere 
+
+System.out.read(); 
+throws IOException 
+
+jcmd for process 
+
+jstack 
+
+
+jit compiler thread 
+thread dump 
+
+
+what is arguments what is parameter 
+variable 
+
+nested class 
+	static nested class
+	non static nested class 
+
+association java
+exception handling 
+
+
+core java volume 1 
+
+
+
+*****************************************************
+what is arguments what is parameter 
+
+## memory leakage in java 
+   no diamond problem 
+association java
+exception handling 
+
+System.out.read(); 
+throws IOException 
+
+private - limiting for the class 
+package lvl private
+protected - 
+public - anywhere
+
+components of JVM 
+
