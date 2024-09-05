@@ -1,0 +1,93 @@
+Sandip Sir:
+
+imp=staticly typed check language >> language neutral
+
+1) Revision
+
+2)Components of JVM
+  >>Class Loader Subsystem.
+     a. Booststrap class loader
+     b. Extension class loader
+     c. System class loader
+     d. Custom class loader
+  >>Run time data area.(2 stacks)
+    a. method area
+    b. heap
+    c. java stacks(function activation records)
+    d. pc register
+    e. Native method stacks.(instructions for next execution)
+  >>Execution engine.(converting byte code into native code)
+    a. Interpreter
+    b. Just In time Compiler
+    c. Garbage
+
+3)Buzzwords
+-Simple
+-Object oriented
+-Architectural Neutral
+-Portable>>
+-Robust
+-Dynamic
+-Multithreaded
+-Secure
+-High performance >>> SLOWER THAN C++
+-Distributed >>> RMI
+
+4)get-to-know >> memory leak
+
+5) how to find size of object /variable in java?
+
+6)Modifiiers> keywords >>used to control visibility of the members of class/Enum/interface.
+  a) Access Modifiers.>>private,protected and public
+  b) Non Access Modifiers.>>static,  final, abstract, interface, transient, synchronized, volatile, strictfp, native.
+ 
+7)Java VM Threads(Exception Handling)>>learn in upcoming lecs.
+
+8)print methos:
+ >> print and println = void
+ >> printf=printstream
+
+9)Java comments
+  imp>> Block comments(multiline)(/*)
+      >> Single line comments(//)
+  imp>> Documentation comments(/**)
+
+10)Data types: 
+(how much memory  req to store all types,
+it also tells that which type of data stored,
+data type helps developers to identify operations,
+also helps to identify the range of data.)
+  
+a)Primitive(value types)
+ >> 8 types
+                          •boolean
+                          •byte
+                          •char
+                          •short
+                          •int
+                          •float
+                          •double
+                          •long
+  b)Non - Primitive(refernce types)
+ >> 4 types
+                          •Interface
+                          •Class
+                          •Array
+                          •Enum
+11)Wrapper Class:
+>>conversion of types
+>>all wrapper class are *final*,so no child class
+>>*abstract*pure virtual function
+**12)java.lang contains all fundamental classes of core java
+13)Super cosmic base class = Object(tree hierarchy)
+14)Overview of string:
+15)typecasting:
+   >>widening conversion: process of converting value of variable of narrower type into wider types
+   >> narrowing -||-: 
+16)Boxing conversion
+>> primitive to non primitive conversion.
+17)Unboxing conversion(parse)
+>>
+18)try to avoid 16&17 conversions
+19)method parameters,method arguments
+   
