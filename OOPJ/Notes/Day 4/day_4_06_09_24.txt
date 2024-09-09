@@ -1,0 +1,35 @@
+1)revision
+
+a. understand the problem
+b. define the class
+c. declare fields in class
+d. create instances of class
+
+
+**nested types,methods,constructor do not get space inside instance.oonly non static fields get memory.
+but get  to according to their order of their declaration.
+
+
+2)what can come in class?*****
+   >fields (variables declared in class)
+   >blocks
+   >constructor
+   >methods (function implemented in class)
+   >nested class
+3.+thiis gets memory allocated and deallocated for
+4.method overload (demo1-4)*****************
+   when we shld give same name to method
+   rules------
+   >>no of parameters passed are diff
+  >> if no of para are same,then type of atleast 1 para must be diff
+  >> -|-,order of type ofpara must be diff
+  >> only on the basis of different return type, we cannot give same name to method 
+
+5.methods which are participating in method overloading are called as overloaded methods.
+6.can we overload main method in java?
+ >>yes
+7.print is overloaded method.  
+8. why we shld use method overloading? 
+>> to reduce
+
+9.local date**********************
