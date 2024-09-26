@@ -1,0 +1,71 @@
+Inheritance in Java:
+What is it?: Inheritance allows a class to acquire properties and methods of another class.
+Why is it useful?: It promotes code reusability and establishes a relationship between parent and child classes.
+Access Specifiers for Inheritance:
+Public: Allows access from any class.
+Protected: Accessible within the package and by subclasses outside the package.
+Default: Accessible only within the same package (no access modifier).
+Private: Not inherited by subclasses.
+Multiple Inheritance: Java doesn’t support multiple inheritance with classes to avoid ambiguity. Achieve it using interfaces.
+Types of Inheritance:
+Single Inheritance: A class inherits from one class.
+Multilevel Inheritance: A class inherits from a class which in turn inherits from another.
+Hierarchical Inheritance: Multiple classes inherit from a single class.
+Constructor Inheritance: Constructors cannot be inherited. Subclasses can call the superclass constructor using super().
+Strings in Java:
+Difference between String, StringBuilder, and StringBuffer:
+String: Immutable, cannot be changed after creation.
+StringBuilder: Mutable and not thread-safe, faster for string manipulations.
+StringBuffer: Mutable and thread-safe, slower than StringBuilder due to synchronization.
+Why are Strings Immutable?: For security, performance, and thread-safety. Once created, they can't be modified.
+intern() Method: Moves the string to the string pool if not already there, allowing string reuse.
+== vs .equals():
+== compares memory addresses (references).
+.equals() compares the content of the strings.
+Literal vs. New String:
+Literal: Stored in the string pool and reused.
+New Object: Stored in heap memory, each creation is a separate object.
+Typecasting in Java:
+Widening Typecasting: Automatically converts smaller types to larger ones (e.g., int to long).
+Narrowing Typecasting: Requires explicit casting as it converts larger types to smaller ones (e.g., double to int).
+Casting Incompatible Data Types: Throws a ClassCastException at runtime.
+Double to Byte Casting: Yes, it's possible. Java will truncate the number, potentially leading to data loss.
+Polymorphism in Java:
+Compile-time Polymorphism: Method overloading—decided at compile time.
+Runtime Polymorphism: Method overriding—decided at runtime.
+instanceof Operator: Checks if an object is an instance of a specific class or subclass. Useful in polymorphism to avoid ClassCastException.Inheritance in Java:
+What is it?: Inheritance allows a class to acquire properties and methods of another class.
+Why is it useful?: It promotes code reusability and establishes a relationship between parent and child classes.
+Access Specifiers for Inheritance:
+Public: Allows access from any class.
+Protected: Accessible within the package and by subclasses outside the package.
+Default: Accessible only within the same package (no access modifier).
+Private: Not inherited by subclasses.
+Multiple Inheritance: Java doesn’t support multiple inheritance with classes to avoid ambiguity. Achieve it using interfaces.
+Types of Inheritance:
+Single Inheritance: A class inherits from one class.
+Multilevel Inheritance: A class inherits from a class which in turn inherits from another.
+Hierarchical Inheritance: Multiple classes inherit from a single class.
+Constructor Inheritance: Constructors cannot be inherited. Subclasses can call the superclass constructor using super().
+Strings in Java:
+Difference between String, StringBuilder, and StringBuffer:
+String: Immutable, cannot be changed after creation.
+StringBuilder: Mutable and not thread-safe, faster for string manipulations.
+StringBuffer: Mutable and thread-safe, slower than StringBuilder due to synchronization.
+Why are Strings Immutable?: For security, performance, and thread-safety. Once created, they can't be modified.
+intern() Method: Moves the string to the string pool if not already there, allowing string reuse.
+== vs .equals():
+== compares memory addresses (references).
+.equals() compares the content of the strings.
+Literal vs. New String:
+Literal: Stored in the string pool and reused.
+New Object: Stored in heap memory, each creation is a separate object.
+Typecasting in Java:
+Widening Typecasting: Automatically converts smaller types to larger ones (e.g., int to long).
+Narrowing Typecasting: Requires explicit casting as it converts larger types to smaller ones (e.g., double to int).
+Casting Incompatible Data Types: Throws a ClassCastException at runtime.
+Double to Byte Casting: Yes, it's possible. Java will truncate the number, potentially leading to data loss.
+Polymorphism in Java:
+Compile-time Polymorphism: Method overloading—decided at compile time.
+Runtime Polymorphism: Method overriding—decided at runtime.
+instanceof Operator: Checks if an object is an instance of a specific class or subclass. Useful in polymorphism to avoid ClassCastException.
