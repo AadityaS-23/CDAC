@@ -1,0 +1,14 @@
+Assignment –2
+Introducing Relational Databases.
+1) Which field of the Customers table is the primary key?
+-> CNUM field, which uniquely identifies each Customer.
+
+2) What is the 4th column of the Customers table?
+-> RATING
+
+3) What is another word for row? For column?
+-> Row (Record,Tuple)
+    Column(Field,Attribute)
+
+4) Why isn’t it possible to see the first five rows of a table?
+-> In MySQL, the first five rows might not be visible due to query constraints like using LIMIT, or if a large dataset is being truncated in a result view.

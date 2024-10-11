@@ -1,0 +1,63 @@
+### Relational and Logical Operators. ###
+ 
+1) Write a query that will give you all orders for more than Rs. 1,000. 
+-> select * 
+    from orders 
+    where amt>1000;
+
+2) Write a query that will give you the names and cities of all salespeople in 
+London with a commission above .10. 
+-> select sname,city
+    from salespeople
+    where city = 'London' and comm > 0.10;
+    
+3) Write a query on the Customers table whose output will exclude all customers 
+with a rating <= 100, unless they are located in Rome.
+-> select *
+    from customers
+    where rating > 100 or city = 'Rome';
+ 
+4) What will be the output from the following query? 
+ 
+ Select * from Orders 
+ where (amt < 1000 OR 
+ NOT (odate = ‘1990-10-03’ 
+ AND cnum > 2003)); 
+->
+  //Error : 
+     ERROR 1064 (42000): You have an error in your SQL syntax; 
+     check the manual that corresponds to your MySQL server version 
+     for the right syntax to use near '?1990-10-03? AND cnum > 2003))' at line 3
+  //Reason : 
+    Due to use of incorrect quotation marks around date value in the Query.
+    Single quotes ('  ') should be used for Strings but here different quotes are used.
+
+5) What will be the output of the following query? 
+ 
+ Select * from Orders 
+ where NOT ((odate = ‘1990-10-03’ OR snum 
+ >1006) AND amt >= 1500); 
+-> 
+  // Error : 
+     ERROR 1064 (42000): You have an error in your SQL syntax; 
+    check the manual that corresponds to your MySQL server version
+    for the right syntax to use near '?1990-10-03? OR snum >1006) AND amt >= 1500)' at line 2
+ //Reason :
+   Due to use of incorrect quotation marks around date value in the Query.
+    Single quotes ('  ') should be used for Strings but here different quotes are used.
+   
+ 
+6) What is a simpler way to write this query? 
+ 
+ Select snum, sname, city, comm From Salespeople 
+where (comm > .12 OR comm <.14);
+
+->  Solution 1 :
+     Select snum, sname, city, comm 
+     From Salespeople 
+     where (comm > .12 AND comm <.14);
+
+     Solution 2 : 
+     Select snum,sname,city,comm
+     from salespeople
+     where comm BETWEEN 0.12 AND 0.14;

@@ -1,0 +1,67 @@
+### Using Special Operators in Conditions. ###
+1) Write two different queries that would produce all orders taken on October 3rd or 4th, 1990.
+-> Query 1 :
+    select * 
+    from orders
+    where odate = '1990-10-03' OR odate = '1990-10-04';
+
+    Query 2 : 
+    select *
+    from orders 
+    where odate IN ('1990-10-03','1990-10-04');
+
+
+2) Write a query that selects all of the customers serviced by Peel or Motika.
+(Hint: the snum field relates the two tables to one another). 
+-> select * 
+    
+
+3) Write a query that will produce all the customers whose names begin with a letter 
+from ‘A’ to ‘G’.
+-> 
+  Query 1 : (Like operator)   
+    select *  
+    from customers
+    where cname like 'A%' OR
+           cname like 'B%' OR
+           cname like 'C%' OR
+           cname like 'D%' OR
+           cname like 'E%' OR
+           cname like 'F%' OR 
+           cname like 'G%' ;
+
+ //NOTE : 
+   This query correctly fetches all customer names starting with any letter from 'A' to 'G', 
+    including those starting with 'G'.
+-------------------------------------------------------------------------------
+  Query 2 : (Using BETWEEN & AND)
+    select * 
+    from customers 
+    where cname between 'A' AND  'G%'; 
+  
+// NOTE :
+     This query is incorrect for your requirement. 
+     The use of 'G%' here is misleading. 
+     BETWEEN includes values starting from 'A' up to 'G' (but does not include any names starting with 'G').
+-------------------------------------------------------------------------------
+  Query 3 :  
+    select * 
+    from customers
+    where LEFT (cname,1) between 'A' AND  'G';
+
+  //NOTE:
+     1. This query will also return the correct results by checking only the first letter of the customer names.
+     2. The LEFT function is used in this Query to extract a specific number of characters from beginning of a string. 
+-------------------------------------------------------------------------------
+     
+4) Write a query that selects all customers whose names begin with the letter ‘C’.
+->
+  select * 
+  from customers
+  where cname LIKE 'C%';
+
+5) Write a query that selects all orders except those with zeroes or NULLs in the amt 
+field
+-> select * 
+    from orders
+    where amt IS NOT NULL and amt <> 0 ;
