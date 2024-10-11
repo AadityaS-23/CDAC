@@ -1,0 +1,67 @@
+  // Algorithm for Finding the Longest Path in a Matrix
+*Input:
+      ->A matrix where each cell contains an integer.
+*Output:
+      ->The length of the longest strictly increasing path starting from any cell in the matrix.
+***Steps:***
+1.Initialize Directions:
+  -> Define possible movement directions in the matrix (up, down, left, right).
+
+2.Define isValid():
+  ->A helper function isValid(row, col, matrix) checks whether a given position is within the matrix bounds.
+
+3.DFS Function (Depth-First Search):
+  ->The dfs() function explores all valid adjacent cells in the matrix starting from a given position (row, col).
+  ->It checks whether the new cell has a value greater than the current one. If yes, it recursively finds the longest path starting from the new cell.
+  ->A memoization table dp stores the longest path length starting from each cell to avoid redundant computations.
+
+4.Main Function findLongestPath():
+  ->The main function initializes a 2D array dp with -1 to keep track of results for each cell.
+  ->It iterates over each cell in the matrix and calls the dfs() function for every cell. The longest path is updated based on the result of dfs().
+
+5.Return the Result:
+  ->After exploring all cells, the function returns the longest path found.
+  
+  //Algorithm Steps :
+  
+1.Initialize movement directions (up, down, left, right) using rowDir and colDir.
+
+2.For each cell in the matrix, perform DFS to find the longest strictly increasing path starting from that cell.
+
+3.In the DFS function:
+  ->If the value for the current cell (row, col) is already computed in the dp table, return that value.
+  ->Otherwise, explore all 4 directions (up, down, left, right).
+  ->For each valid neighboring cell, if its value is greater than the current cell, recursively find the longest path starting from that neighboring cell.
+  ->The result for the current cell is 1 plus the longest path found from the neighbors.
+  ->Store the result in the dp table and return it.
+
+4.Repeat the above process for all cells in the matrix. Keep track of the longest path found.
+
+5.Return the longest path length.
+
+  //Step-by-Step DFS Exploration:
+1.Start at (0,0) with value 9:
+   ->Explore its neighbors (up, down, left, right).
+   ->All neighbors either have equal or smaller values, so the longest path from this cell is 1.
+2.Move to (1,2) with value 8:
+   ->Explore its neighbors.
+   ->Only (0,2) with value 4 is smaller, so the longest path from (1,2) is 1.
+
+3.Move to (2,0) with value 2:
+   ->Explore its neighbors.
+   ->Only (1,0) with value 6 is larger. DFS is called on (1,0).
+
+4.DFS on (1,0) with value 6:
+   ->From (1,0), explore its neighbors.
+   ->Move to (0,0) with value 9. DFS is called on (0,0), which already has the result 1.
+   ->The path from (1,0) is 1 + 1 = 2.
+
+5.DFS on (2,0) continues:
+   ->The path from (2,0) is 1 + 2 = 3.
+
+6.Longest path found:
+   ->The DFS completes and the longest path found is from 1 -> 2 -> 6 -> 9 with length 4.
+   
+   
+  //Ultimate Outcome : 
+     ->This approach ensures that the longest path is found by exploring all possible paths using DFS and storing intermediate results to avoid recalculating.
