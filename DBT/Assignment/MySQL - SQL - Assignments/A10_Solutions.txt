@@ -1,0 +1,28 @@
+//Joining a Table to Itself.
+
+1) Write a query that produces all pairs of salespeople who are living in the same 
+city. Exclude combinations of salespeople with themselves as well as duplicate 
+rows with the order reversed.
+-> Approach 1 : (w/o using joins)
+    select distinct a.sname,b.sname 
+    from salespeople a , salespeople b
+    where a.sname > b.sname and a.city = b.city;
+
+   Approach 2 : 
+   select s1.sname as salesperson1, s2.sname as salesperson2, s1.City
+   from salespeople s1
+   join salespeople s2 ON s1.City = s2.City 
+   where s1.Snum < s2.Snum;
+
+
+
+2) Write a query that produces the names and cities of all customers with the same 
+rating as Hoffman
+-> Approach 1 :
+    
+
+
+    Approach 2: 
+    select cname, City
+    from  customers
+    where rating = (select rating from customers where cname = 'Hoffman');
