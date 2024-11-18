@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Booking Confirmation - Delta Home Services</title>
+ <link rel="icon" type="image/png" href="/images/delta-header.png">
+ <link href="style1.css" rel="stylesheet">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg" style="background-color: #091057;">
+    <a class="navbar-brand text-white" href="index.html">
+      <img src="images/delta-header.png" alt="Logo" style="height: 40px; margin-right: 10px;">
+      Delta Home Services</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+     <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+     <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+     <li class="nav-item"><a class="nav-link text-white" href="profile.html">Providers</a></li>
+     <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact Us</a></li>
+     <li class="nav-item"><a class="nav-link text-white" href="booking.html">Book Now</a></li>
+     <li class="nav-item"><a class="nav-link text-white" href="signin.html">Sign In</a></li>
+    <li class="nav-item"><a class="nav-link text-white" href="signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Thank You for Your Booking!</h2>
+    <div class="text-center">
+     <p>Your service request has been received and confirmed.</p>
+  <p><strong>Booking Reference:</strong> #123456</p>
+     <p><strong>Service Type:</strong> <span id="serviceType">Plumbing</span></p>
+   <p><strong>Preferred Date:</strong> <span id="date">2024-12-25</span></p>
+    <p><strong>Preferred Time:</strong> <span id="time">10:00 AM</span></p>
+      <p>We look forward to serving you!</p>
+    </div>
+  </div>
+
+  <footer class="bg-light text-center py-3">
+    <p>&copy; 2024 Delta Home Services. All rights reserved.</p>
+    <p><a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script>
+   
+    const booking = JSON.parse(localStorage.getItem('lastBooking'));
+
+   
+    if (booking) {
+      document.getElementById('serviceType').textContent = booking.serviceType;
+      document.getElementById('date').textContent = booking.date;
+      document.getElementById('time').textContent = booking.time;
+    }
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>
