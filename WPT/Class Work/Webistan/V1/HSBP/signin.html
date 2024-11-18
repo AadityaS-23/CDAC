@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Delta Home Services</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <link href="signin.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <h1>Sign In to Your Account</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="providers.html">Providers</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+                <li><a href="signin.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="signin-form">
+        <h2>Sign In</h2>
+        <form action="submit_signin.html" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+        <p><a href="forgot_password.html">Forgot Password?</a></p>
+    </footer>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+          
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false; 
+            }
+
+          
+            if (password.trim() === "") {
+                alert("Please enter your password.");
+                return false; 
+            }
+
+           
+            return true;
+        }
+    </script>
+
+</body>
+</html>

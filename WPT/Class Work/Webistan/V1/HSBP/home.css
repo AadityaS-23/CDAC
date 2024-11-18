@@ -1,0 +1,102 @@
+/* Reset some default styling */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 3px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Services Overview */
+#services-overview {
+    text-align: center;
+    padding: 20px;
+}
+
+#services-overview h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#services-overview ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* Featured Providers */
+#featured-providers {
+    padding: 20px;
+    background-color:white;
+}
+
+#featured-providers h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.provider {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin:5px;
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: center;
+}
+
+.provider h3 {
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+}

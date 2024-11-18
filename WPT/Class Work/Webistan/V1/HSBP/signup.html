@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Delta Home Services</title>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+ <link href="signup.css" rel="stylesheet">
+
+
+</head>
+
+
+
+<body>
+
+    <header>
+       <h1>Create an Account</h1>
+      <nav>
+          <ul>
+           <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+           <li><a href="providers.html">Providers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="signin.html">Sign In</a></li>
+     </ul>
+      </nav>
+    </header>
+
+    <section id="signup-form">
+        <h2>Sign Up</h2>
+        <form action="submit_signup.html" method="post">
+          <label for="name">Full Name:</label>
+         <input type="text" id="name" name="name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+    <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <button type="submit">Create Account</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </footer>
+
+    <script>
+          document.getElementById("signupForm").addEventListener("submit", function(event) {
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
+        if (password !== confirmPassword) {
+            event.preventDefault();
+            alert("Passwords do not match. Please re-enter.");
+          }
+      });
+    </script>
+
+</body>
+</html>
