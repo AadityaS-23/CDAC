@@ -1,0 +1,30 @@
+
+body {
+    background-color: #DBD3D3; 
+  }
+  
+  .card {
+    border: none;
+  
+  }
+  
+  .nav-link:hover {
+    color: #EC8305; /* color change for links(hover) */
+  }
+  
+  .btn {
+    transition: background-color 0.3s; /*trans for btns */
+  }
+  
+  .btn:hover {
+    background-color: #DBD3D3; /*color changer(hover) */
+    color: #091057; /* text color change (hover)*/
+  }
+  
+ /* .card-services{
+     background-color: aqua;
+     margin-bottom :20px ;
+ } */
+
+
+ 

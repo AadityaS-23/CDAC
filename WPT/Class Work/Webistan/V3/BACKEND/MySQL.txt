@@ -1,0 +1,24 @@
+MySQL:
+
+create database HomeServices;
+use HomeServices;
+
+create table orders(
+  order_id INT AUTO_INCREMENT PRIMARY KEY,
+  service_type VARCHAR(255) NOT NULL,
+  service_date DATE NOT NULL,
+  service_time TIME NOT NULL
+);
+
+
+reset auto iincr
+ALTER TABLE orders AUTO_INCREMENT = 1;
+
+While you can manually reset the AUTO_INCREMENT value, it's generally better practice to let it continue to increment. 
+This approach avoids potential issues with data integrity and relationships between tables
+
+------------
+observation:
+even if  i edit,its deleted
+
+
