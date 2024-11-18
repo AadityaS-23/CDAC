@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Items  </title>
+    <link rel="stylesheet" href="q3.css">
+
+</head>
+<body>
+    <div class="container">
+        <label for="grocery">Choose grocery that is bought to remove:</label>
+        <select id="grocery">
+            <option value="1">Potato</option>
+            <option value="2">Tomato</option>
+            <option value="3">Brinjal</option>
+            <option value="4">Onions</option>
+            <option value="5">Spinach</option>
+            <option value="6">Chilly Pepper</option>
+            <option value="7">Shimla Mirch</option>
+        </select>
+        <button onclick="removeSelectedItem()">Remove Selected Grocery</button>
+    </div>
+
+    <script>
+        function removeSelectedItem() {
+            var select = document.getElementById("grocery");
+            select.remove(select.selectedIndex);
+        }
+    </script>
+</body>
+</html>

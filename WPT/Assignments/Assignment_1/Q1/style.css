@@ -1,0 +1,85 @@
+/* Centering the resume content */
+body {
+    width: 80%;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    background:linear-gradient(#4A628A,#B9E5E8); /* Soft light gray for background */
+    padding: 20px;
+}
+
+/* Center alignment for main container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff; /* White background for content */
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for subtle depth */
+    border-radius: 10px; /* Rounded corners */
+    
+}
+
+/* Header style */
+h1, h2, h3 {
+    text-align: left;
+    font-weight: bold;
+    color: #333; /* Dark gray text for headers */
+}
+
+/* Key points highlighted */
+.keypoint {
+    background-color: #005f73; /* Rich teal background for key sections */
+    color: white;
+    padding: 0.5em;
+    text-align: left;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Styling for lists */
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+    color: #333; /* Dark gray text for content */
+}
+
+/* Paragraph style */
+p {
+    text-align: left;
+    margin: 0.5em 0;
+    color: #333;
+}
+
+/* Line breaks between sections */
+hr {
+    border: 0;
+    height: 2px;
+    background-color: #005f73; /* Matching line breaks with keypoint color */
+    margin: 1.5em 0;
+}
+
+/* Contact details styling */
+.contact-info {
+    text-align: center;
+    font-style: italic;
+    background-color: #94d2bd; /* Light teal background for contact info */
+    padding: 5px;
+    border-radius: 5px;
+    color: #333;
+}
+
+/* Styling for links */
+a {
+    color: #0a9396; /* Teal color for links */
+    text-decoration: none;
+}
+
+/* Hover effect for links */
+a:hover {
+    color: #005f73; /* Darker teal on hover */
+}
+
+/* Additional styles */
+li {
+    margin: 0.5em 0;
+}

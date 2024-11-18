@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight Bold Words</title>
+    <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+
+    <!-- Link to hover over -->
+    <a href="q4.css" id="highlightLink" onmouseover="highlightBold()" onmouseout="removeHighlight()">
+
+    </a>
+
+    <!-- Paragraph with bold words -->
+    <p>
+        We have just started this section for the users (<b>beginner</b> to intermediate) who
+        <b>want</b> to work with <b>various</b> JavaScript <b>problems</b> and write scripts online
+        to <b>test</b> their JavaScript <b>skill</b>.
+    </p>
+
+    <script>
+        function highlightBold() {
+            // Select all bold elements in the paragraph
+            const boldWords = document.querySelectorAll("p b");
+            
+            // Add 'highlight' class to each bold word
+            boldWords.forEach(word => {
+                word.classList.add("highlight");
+            });
+        }
+
+        function removeHighlight() {
+            // Select all bold elements in the paragraph
+            const boldWords = document.querySelectorAll("p b");
+            
+            // Remove 'highlight' class from each bold word
+            boldWords.forEach(word => {
+                word.classList.remove("highlight");
+            });
+        }
+    </script>
+
+</body>
+</html>

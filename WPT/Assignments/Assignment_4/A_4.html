@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>1. ProcessData and toUpperCase callback</h3>
+    <script> 
+      console.log("Q1.")  ;
+function toUpperCase(str) {
+    return str.toUpperCase();
+}
+
+function processData(input, callback) {
+    const result = callback(input);
+    console.log(result);
+}
+
+
+processData("How are you ", toUpperCase);
+
+    </script>
+
+    <h3>2. ForEachElement with an anonymous callback function</h3>
+
+   <script>
+console.log("Q2. ")    ;
+function forEachElement(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i], i);
+    }
+}
+
+forEachElement([1, 2, 3, 4], (element, index) => {
+    console.log(`Index ${index}: ${element * 2}`);
+});
+
+   </script>
+   
+    <h3>3. FetchData with a simulated network request</h3>
+   <script>
+    console.log("Q3.");
+  // Simulate a network request with a delay
+function fetchData(url, callback) {
+    console.log(`Starting to fetch data from ${url}...`);
+
+    // Simulating a 2-second delay for fetching data
+    setTimeout(() => {
+        const response = "This is the simulated response from the server.";
+        callback(response);  // Passing response to the callback
+    }, 2000);  // 2 seconds delay
+}
+
+// Call fetchData and log the response once it's received
+fetchData("https://www.geeksforgeeks.org/", function(response) {
+    console.log("Data received:", response);
+});
+
+   </script> 
+   <h3>4. Adding error handling to fetchData</h3>
+
+   <script>
+    console.log("Q4.");
+    // Simulate a network request with error handling
+function fetchData(url, callback) {
+    console.log(`Fetching data from ${url}...`);
+
+    setTimeout(() => {
+        // Randomly simulate an error
+        const hasError = Math.random() > 0.5;  // 50% chance of error
+        if (hasError) {
+            callback("Error: Unable to fetch data.");  // Call with error
+        } else {
+            const response = "Simulated successful response.";
+            callback(null, response);  // No error, pass the response
+        }
+    }, 2000);  // 2-second delay
+}
+
+// Call fetchData and handle both error and success in the callback
+fetchData("https://example.com", function(error, response) {
+    if (error) {
+        console.log("Error occurred:", error);  // Log the error if it exists
+    } else {
+        console.log("Data received:", response);  // Log the response if no error
+    }
+});
+
+   </script>
+   <h3>5. Chaining fetchData with processData</h3>
+   <script>
+    console.log("Q5.")
+    // Simulate a network request with error handling
+function fetchData(url, callback) {
+    console.log(`Fetching data from ${url}...`);
+
+    setTimeout(() => {
+        const hasError = Math.random() > 0.5;  // 50% chance of error
+        if (hasError) {
+            callback("Error: Failed to fetch data.", null);  // Error case
+        } else {
+            const response = "Fetched data successfully!";
+            callback(null, response);  // Success case
+        }
+    }, 2000);  // 2-second delay
+}
+
+// Function that processes the fetched data
+function processData(data) {
+    const processed = data.toUpperCase();  // Simple processing by converting to uppercase
+    console.log("Processed Data:", processed);  // Log the processed data
+}
+
+// Chain the fetchData and processData together
+fetchData("https://helo.com", function(error, response) {
+    if (error) {
+        console.log("Error:", error);  // Log error if any
+    } else {
+        processData(response);  // Pass the response to processData if successful
+    }
+});
+
+   </script>
+    
+</body>
+</html>

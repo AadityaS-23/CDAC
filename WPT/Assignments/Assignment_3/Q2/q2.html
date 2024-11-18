@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Student Details Form</title>
+    <link rel="stylesheet" href="q2.css">
+    
+</head>
+<body>
+    
+    <div class="form-container">
+        <form id="userForm">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            
+            <label for="contactNo">Contact No.:</label>
+            <input type="text" id="contactNo" name="contactNo" required>
+            
+            <label for="emailId">Email ID:</label>
+            <input type="email" id="emailId" name="emailId" required>
+            <br>
+            <button type="button" onclick="printValues()">Submit</button>
+        </form>
+    </div>
+    <div class="details" id="details"></div>
+
+    <script>
+        function printValues() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var contactNo = document.getElementById('contactNo').value;
+            var emailId = document.getElementById('emailId').value;
+            
+            var details = document.getElementById('details');
+            details.innerHTML = 'First Name: ' + firstName + '<br>' +
+                               'Last Name: ' + lastName + '<br>' +
+                               'Contact No.: ' + contactNo + '<br>' +
+                               'Email ID: ' + emailId;
+        }
+    </script>
+</body>
+</html>

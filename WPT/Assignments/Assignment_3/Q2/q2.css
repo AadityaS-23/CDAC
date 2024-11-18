@@ -1,0 +1,36 @@
+body {
+    padding-left:42%;
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 20px;
+}
+
+.form-container {
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.form-container label {
+    display: block;
+    margin-top: 10px;
+}
+.form-container input {
+    width: 25%;
+ 
+    padding:10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+.form-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form-container button:hover {
+    background-color: #45a049;
+}
+.output {
+    margin-top: 20px;
+    font-weight: bold;
+}

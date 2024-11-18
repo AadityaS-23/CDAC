@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ 
+ const Tax_rate = 0.08;
+
+let cart = [];
+let totalPrice = 0;
+
+function addItem(name, price, quantity){
+    const item = {
+        name: name,
+        price: price,
+        quantity: quantity
+    };
+    cart.push(item);
+    console.log(`${name} added to cart.`);
+    calulateTotal();
+}
+
+function removeItem(name){
+    cart = cart.filter(item => item.name !== name);
+    console.log(`${name} removed from cart.`);
+    calulateTotal();
+}
+
+function calulateTotal(){
+    let subtotal = 0;
+    cart.forEach(item => subtotal +=item.price * item.quantity); 
+    const tax = subtotal * Tax_rate;
+    totalPrice = subtotal + tax;
+    console.log(`Subtotal: $${subtotal.toFixed(2)}, Tax: $${tax.toFixed(2)}, Total: $${totalPrice.toFixed(2)}`);
+}
+
+addItem("Milk", 1.2, 2);
+addItem("Yogurt", 0.6, 2);
+addItem("Butter", 1, 1);
+
+   removeItem("Butter");
+
+console.log(`Final Total Price: $${totalPrice.toFixed(2)}`);
+
+
+</script>
+</body>
+</html>

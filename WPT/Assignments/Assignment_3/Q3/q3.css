@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding-top: 9%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 0%;
+}
+.container {
+    max-width: 300px;
+    margin: auto;
+}
+select{
+    width: 100%;
+    border-color: black;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    background-color:green;
+}
+
+button {
+    width: 100%;
+    border-color:black;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    background-color:red;
+}

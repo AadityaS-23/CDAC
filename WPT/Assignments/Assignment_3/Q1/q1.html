@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Paragraph Style Change</title>
+    <link rel="stylesheet" href="q1.css">
+    <script>
+        function changeStyle() {
+            var paragraph = document.getElementById("paragraph");
+            paragraph.style.fontFamily = "Courier New, monospace";
+            paragraph.style.fontSize = "20px";
+            paragraph.style.color = "green";
+
+            var steps = document.getElementById("steps");
+            steps.style.fontFamily = "Courier New, monospace";
+            steps.style.fontSize = "20px";
+            steps.style.color = "red";
+        }
+    </script>
+</head>
+<body>
+    <h1>Structure Of A Paragraph</h1>
+    <div>
+        <p id="paragraph" class="s-paragraph">
+            How many sentences are in a paragraph? <br> It is important to note that there is a great deal of variety in how long a paragraph is and there is not a minimum or maximum number of sentences that it must have to fit its definition.<br> Some writers will opt to use very short paragraphs, while others will include dozens of sentences in their paragraphs.<br> It is also important to know that most writers separate lines of dialogue into paragraphs, so if a character only speaks a single line, it will be its own paragraph.
+            <br> Keeping that in mind, there is a general agreement on the format of a standard paragraph, which especially applies to informational and argumentative or persuasive writing.<br> A paragraph should be divided into three distinct sections that each serve a purpose to the paragraph as a whole.
+        </p>
+        <ul id="steps" class="steps">
+            <li>Topic Sentence - <br> => The topic sentence is the sentence that lays out a preview of what the paragraph will be about. Think of it as a preview of the paragraph. It puts the reader's mindset into the right place to digest the information.</li>
+            <li>Supporting Sentence - <br> => The supporting sentence is the most important part of the paragraph and provides details to support the topic sentence. If the topic sentence is about frogs, then the details should be about frogs as well. This section can be longer or shorter depending on the content and the writer's preference.</li>
+            <li>Concluding Sentence - <br> => The concluding sentence wraps up the paragraph and ties back to the topic sentence. A conclusion could be a reiteration of the topic, an opinion based on the topic, or a way to wrap up the paragraph with a more general statement.</li>
+        </ul>
+    </div>
+    <button onclick="changeStyle()">Submit</button>
+</body>
+</html>

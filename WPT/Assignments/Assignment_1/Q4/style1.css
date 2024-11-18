@@ -1,0 +1,76 @@
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(bg.webp);
+            background:linear-gradient(#4A628A,#B9E5E8) ;
+            background-blend-mode: difference;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .signup-form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .signup-form h2 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .signup-form input[type="text"],
+        .signup-form input[type="email"],
+        .signup-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .signup-form input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .signup-form label {
+            color: white;
+            font-size: 14px;
+        }
+        .signup-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        .signup-form button:hover {
+            background-color: #45a049;
+        }
+        .signup-form p {
+            color: white;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .signup-form p a {
+            color:black;
+            text-decoration: none;
+        }
+        .signup-form p a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: black;
+            font-size: 12px;
+        }
+  

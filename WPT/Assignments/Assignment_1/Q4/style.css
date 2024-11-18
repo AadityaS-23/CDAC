@@ -1,0 +1,64 @@
+body{
+    background-image:url(bg.jpg) ;
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(#EEEEEE,#D4BEE4,#9B7EBD,#3B1E54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin:0;
+}
+
+.sign-in-form{
+    background-blend-mode: darken;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width:300px;
+}
+.sign-in-form h2{
+     color:black;
+     margin-bottom:20px ;
+     font-size:24px;
+}
+.sign-in-form input [type="text"],
+.sign-in-form input [type="password"],
+.sign-in-form input [type="text"]{
+    width:100%;
+    padding: 10px;
+    margin:10px 0;
+    border:1px ;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+.sign-in-form input[type="checkbox"]{
+    margin-right:10px;
+}
+.sign-in-form label{
+    color:white;
+    font-size:14px;
+}
+.sign-in-form button{
+  background-color:#4CAF50 ;
+  color:white;
+  padding: 10px 20px;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:16px;
+  margin-top:20px;
+}
+
+.sign-in-form button:hover{
+    background-color: #4CAF50;
+}
+
+.sign-in-form p{
+    color: white;
+    font-size:14px;
+    margin-top:20px;
+}
+.sign-in-form p a{
+    color:black;
+    text-decoration:none;
+}
