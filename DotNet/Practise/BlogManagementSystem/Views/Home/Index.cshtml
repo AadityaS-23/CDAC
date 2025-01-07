@@ -1,0 +1,14 @@
+﻿@model IEnumerable<BlogManagementSystem.Models.BlogPost>
+
+<h2>Latest Blog Posts</h2>
+@if (Model != null)
+@foreach (var post in Model)
+{
+    <div>
+        <h3>@post.Title</h3>
+        <p>@post.Content.Substring(0, 100)...</p>
+        <p><b>Category:</b> @post.Category.Name</p>
+        <p><i>Published on: @post.CreatedAt.ToShortDateString()</i></p>
+        <a href="/BlogPost/Details/@post.Id">Read More</a>
+    </div>
+}
