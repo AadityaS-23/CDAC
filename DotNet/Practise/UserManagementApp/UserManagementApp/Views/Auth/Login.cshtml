@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+@section Title {
+ ViewData["Title"] = "Login";
+}
+
+<form asp-action=" Login" method="post">
+      <label>Email : </label>
+	<input type="email" name="Email" />
+
+
+	<label>Password : </label>
+	<input type="password" name="Password" />
+
+   <button type="submit">Login</button>
+
+      <p>@ViewBag.Error</p>
+ 
+</form>
+
