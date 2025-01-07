@@ -1,0 +1,38 @@
+﻿@model List<ProductManagementSystem.Models.Product>
+
+
+@{ViewData["Title"] = "Product List";
+
+}
+
+<h1>Product List</h1>
+
+<a asp-action="Create" class="btn btn-primary">Add New Product</a>
+
+
+<table class="table table-striped mt-3">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Description</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		@foreach (var product in Model) { 
+		   <tr>
+				<td>@product.Name</td>
+				<td>@product.Price</td>
+				<td>@product.Description</td>
+				<td>
+					<a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning">Edit</a>
+					<a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">Delete</a>
+				</td>
+		   </tr>
+		
+		}
+	</tbody>
+
+</table>
