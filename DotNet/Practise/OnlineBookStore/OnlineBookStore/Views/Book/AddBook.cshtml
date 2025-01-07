@@ -1,0 +1,31 @@
+﻿@model OnlineBookStore.Models.Book
+
+<h1>Add new Book</h1>
+<form asp-action= "AddBook" asp-controller="Book" method="post">
+	<div>
+		<label>Title</label>
+		<input asp-for="Title" />
+		<span asp-validation-for="Title" style="color:orangered"></span>
+    </div>
+
+	<div>
+		<label>Author</label>
+		<input asp-for="Author" />
+		<span asp-validation-for="Author" style="color:orangered"></span>
+	</div>
+
+	<div>
+		<label>Price</label>
+		<input asp-for="Price" type="number" step="0.01"/>
+		<span asp-validation-for="Price" style="color:orangered"></span>
+	</div>
+
+	<div>
+		<label>Published Date</label>
+		<input asp-for="PublishedDate" type="date" />
+		<span asp-validation-for="PublishedDate" style="color:orangered"></span>
+	</div>
+	<button type="submit" class="btn btn-outline-primary">Add Book</button>
+</form>
+
+<a href="@Url.Action("Index","Book")">Back to List</a>

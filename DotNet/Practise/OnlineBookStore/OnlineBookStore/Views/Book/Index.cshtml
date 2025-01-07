@@ -1,0 +1,33 @@
+﻿@model List<OnlineBookStore.Models.Book>
+
+<h1>  Book List </h1>
+<a href="@Url.Action("AddBook","Book")">Add new book</a>
+
+
+@if (Model.Count == 0)
+{
+	<p>No Books Available</p>
+}
+
+else {
+	<table>
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>Author</th>
+				<th>Price</th>
+				<th>Published Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var book in Model) {
+				<tr>
+					<th>@book.Title</th>
+					<th>@book.Author</th>
+					<th>@book.Price</th>
+					<th>@book.PublishedDate.ToShortDateString()</th>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
