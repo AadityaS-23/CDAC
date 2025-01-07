@@ -1,0 +1,28 @@
+﻿s
+@model EmployeeManagementApp.Models.Employee
+
+<h2>Create Employee</h2>
+
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Position</label>
+        <input asp-for="Position" class="form-control" />
+        <span asp-validation-for="Position" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label>Salary</label>
+        <input asp-for="Salary" class="form-control"  step="0.01"/>
+        <span asp-validation-for="Salary" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
